@@ -1,26 +1,33 @@
 <template>
   <div class="item">
-      <p>
-        <label for="search">
-          <button @click="getResearch">Test</button>
-        </label>
-        <input v-model="research" placeholder="Search..." autocomplete="off">
-      </p>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping" @click="getResearch">@</span>
+      <input 
+        class="form-control" 
+        v-model="research" 
+        placeholder="Search for recipe..." 
+        v-on:keyup="keyupEnter"
+        autocomplete="off"
+      >
+    </div>
   </div>
 </template>
 
 <script>
   import { ref, provide } from 'vue';
   export default{
-    name: '',
     setup(props, context){
       const research = ref('');
       const getResearch = () => {
         context.emit('research', research.value)
       }
+      const keyupEnter = (e) => {
+        if(e.keyCode === 13) context.emit('research', research.value)
+      }
       return{
         research,
-        getResearch
+        getResearch,
+        keyupEnter
       }
     }
   }

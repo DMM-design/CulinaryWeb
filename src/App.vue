@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <NavBar />
     <RouterView class="container"/>
     <Footer />
@@ -13,4 +13,7 @@
 
 <style>
   @import '@/assets/base.css';
+  .all{
+    background-color: var(--bg);
+  }
 </style>

@@ -1,10 +1,12 @@
 <template>
-  <div class="about">
+  <div class="home">
     <ResearchBar 
       @research = research
+      class="mt-4"
     />
-    <div class="recipes">
+    <div class="recipes d-flex flex-wrap gap-5 mt-5">
       <Recipes 
+        class
         v-for="recipe in recipes" 
         :key='recipe'
         :id=recipe.id
@@ -36,10 +38,20 @@
 
 </script>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
+<style scoped>
+@media (min-width: 300px) {
+  .home {
     min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    min-height: 89.4vh;
+  }
+  .recipes{
+    display: flex !important;
+    justify-content: center;
   }
 }
 </style>

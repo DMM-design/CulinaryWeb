@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="mt-5">
       <span class="container"> Domingo Mesa Maliniak © {{date.getFullYear()}} </span>
     </footer>
 </template>
@@ -11,13 +11,18 @@
 
 <style scoped>
     footer { 
-        margin-top: auto;
-        width: 100vw;
-        height: 5vh;
+        width: auto;
+        height: 10vh;
         display: flex;
-        justify-content: center;
         align-items: center;
+        text-align: center;
         color: var(--txt_color);
         background-color: var(--header_footer_bg);
+    }
+    @media screen and (max-width: 600px) {
+        footer {
+            height: 5vh;
+            align-items: baseline;
+        }
     }
 </style>
