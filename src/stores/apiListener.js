@@ -5,7 +5,6 @@ export const apiListener = defineStore({
     state: () => ({
         research: '',
         idRecipe: 0,
-        recipeInfo: {}
     }),
     getters: {
         getRecipes: async (state) => {
