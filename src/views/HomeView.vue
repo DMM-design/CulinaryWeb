@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-  import { ref, inject } from 'vue';
+  import { ref } from 'vue';
   import { apiListener } from '@/stores/apiListener';
 
   import ResearchBar from '@/components/Research.vue';
@@ -30,12 +30,9 @@
     api.research = data;
     setTheRecipeData();
   };
-  
   const setTheRecipeData = async () => {
-    await api.getRecipes.then(data => recipes.value = data.results);
+    await api.getRecipes.then(data => recipes.value = data?.results);
   }
-
-
 </script>
 
 <style scoped>

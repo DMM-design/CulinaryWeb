@@ -12,7 +12,14 @@
     </div>
 </template>
 <style scoped>
-
+    .btn{
+        background-color: var(--bg);
+        color: var(--txt_color);
+    }
+    .card{
+        background-color: var(--card_bg);
+        color: var(--txt_color);
+    }
 </style>
 <script setup>
     const props = defineProps({
