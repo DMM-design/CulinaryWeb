@@ -21,10 +21,15 @@
         color: var(--txt_color);
     }
 </style>
-<script setup>
-    const props = defineProps({
-        id: '',
-        title: '',
-        image: '',
-    });
+<script>
+export default{
+    props: {
+        id: Number,
+        title: String,
+        image: String
+    },
+    setup(props, context){
+        return{ props }
+    }
+}
 </script>

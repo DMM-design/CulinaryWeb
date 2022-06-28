@@ -4,10 +4,10 @@ export const jsonHandler = defineStore({
     id: 'jsonHandler',
     state: ()=>({
         likedRecipe: {},
-        commantsOnRecipe: {}
+        commentsOnRecipe: {}
     }),
     getters: {
-        saveLikedRecipe: (state) => {
+        saveCommentsRecipe: (state) => {
             
         }
     }

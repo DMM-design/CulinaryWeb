@@ -5,6 +5,7 @@ export const apiListener = defineStore({
     state: () => ({
         research: '',
         idRecipe: 0,
+        recipeInfo: {}
     }),
     getters: {
         getRecipes: async (state) => {
@@ -18,7 +19,7 @@ export const apiListener = defineStore({
         },
         getAdditionalInformation: async (state) => {
             if(state.idRecipe === '') return;
-            const URL = `https://api.spoonacular.com/${state.idRecipe}/information`;
+            const URL = `https://api.spoonacular.com/recipes/${state.idRecipe}/information`;
             const querry = `?apiKey=673028a43cdf404a84b3b5f654602035`;
             const additionalInformation = await fetch(URL + querry)
                                                 .then((response) => response.json())

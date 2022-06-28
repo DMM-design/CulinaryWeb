@@ -36,7 +36,7 @@
 </script>
 
 <style scoped>
-@media (min-width: 300px) {
+@media (min-width: 1024px) {
   .home {
     min-height: 100vh;
   }
