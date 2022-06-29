@@ -1,6 +1,6 @@
 # CulinaryWeb
 
-This template should help get you started developing with Vue 3 in Vite.
+This program was a recruitment task to a company. The program was designed to recreate existed pages of recipes.
 
 ## Recommended IDE Setup
 
